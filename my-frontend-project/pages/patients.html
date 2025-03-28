@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patients</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+    
+        .zen-dots-regular {
+          font-family: "Zen Dots", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+        }
+    </style>
+</head>
+<body class="class="bg-gray-100">
+
+    <div class="flex min-h-screen">
+  
+      <!-- Sidebar -->
+      <aside class="w-64 bg-white border-r flex flex-col justify-between p-6">
+        <div>
+          <!-- Logo -->
+          <div class="flex items-center space-x-2 text-xl font-bold font-gstatic text-blue-700">
+            <img src="../assets/images/pulse-svgrepo-com 1.svg" alt="UniHealth Icon" class="h-6 w-6" />
+            <a href="./in"></a><span class="zen-dots-regular text-blue-850">UNIHEALTH</span>
+          </div>
+          
+          <!-- Menu -->
+            <nav class="space-y-8 mt-40 text-gray-300">
+                <div class="text-sm font-semibold text-gray-300">GENERAL</div>
+                <a href="./dashboard.html" class="flex items-center space-x-2 font-medium hover:text-blue-700">
+                    <span><i class="fas fa-house"></i></span>
+                    <span class="text-gray-300">Dashboard</span>
+                </a>
+                <a href="./patients.html" class="flex items-center space-x-3 font-medium text-white bg-blue-700 rounded-md py-2 px-2">
+                    <span><i class="fas fa-user-group"></i></span>
+                    <span>Patients</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 font-medium hover:text-blue-700">
+                    <span><i class="fas fa-file"></i></span>
+                    <span class="text-gray-300">Reports</span>
+                </a>
+                <a href="#" class="flex items-center space-x-2 font-medium hover:text-blue-700">
+                    <span><i class="fas fa-calendar"></i></span>
+                    <span class="text-gray-300">Appointments</span>
+                </a>
+            </nav>
+        </div>
+  
+        <!-- User -->
+        <div class="flex items-center space-x-3">
+          <img src="../assets/images/pexels-moh-adbelghaffar-764529.jpg" alt="User" class="h-10 w-10 rounded-full">
+          <div>
+            <p class="font-semibold">Natasha Backman</p>
+            <p class="text-sm text-gray-500">School Nurse</p>
+          </div>
+        </div>
+      </aside>
+  
+      <!-- Main Content -->
+      <main class="flex-1 p-8 overflow-y-auto">
+        <!-- Breadcrumb -->
+        <div class="text-sm text-gray-500 mb-2">Dashboard  > <span class="text-blue-700 font-bold">Patients</span></div>
+  
+        <!-- Header -->
+        <div class="flex items-center justify-between mb-6">
+          <div class="text-2xl font-bold">Patients</div>
+          <div class="flex space-x-10">
+            <input type="password" placeholder="Enter Password"
+              class="border border-gray-300 rounded-md px-6 py-3 text-sm focus:outline-blue-500" />
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 text-sm">Add New Patient</button>
+          </div>
+        </div>
+  
+        <!-- Tabs -->
+        <div class="flex space-x-6 mb-4 text-sm text-gray-600 border-b pb-2">
+          <button class="text-black font-semibold">All Records</button>
+          <button>Flagged</button>
+          <button>Appointments</button>
+          <button>Completed</button>
+        </div>
+  
+        <!-- Table -->
+        <div class="bg-white rounded-lg shadow p-4 overflow-x-auto">
+          <table class="w-full text-sm text-left">
+            <thead>
+              <tr class="text-gray-500 border-b">
+                <th class="py-2">Patient</th>
+                <th class="py-2">Vitals</th>
+                <th class="py-2">Date</th>
+                <th class="py-2">Time</th>
+                <th class="py-2">Doctor</th>
+                <th class="py-2">Status</th>
+              </tr>
+            </thead>
+            
+            
+            <tbody>
+                <!-- Sample Row -->
+                <tr class="border-b hover:bg-gray-50">
+                  <td class="py-2 flex items-center space-x-2">
+                    <i class="fas fa-square text-gray-400 text-xs"></i>
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">Text</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2 flex items-center space-x-2">
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">
+                    <button class="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full font-semibold">LABEL</button>
+                  </td>
+                </tr>
+                <!-- Repeat similar rows -->
+                <!-- Add a loop here if using dynamic data -->
+              </tbody>
+
+              <tbody>
+                <!-- Sample Row -->
+                <tr class="border-b hover:bg-gray-50">
+                  <td class="py-2 flex items-center space-x-2">
+                    <i class="fas fa-square text-gray-400 text-xs"></i>
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">Text</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2 flex items-center space-x-2">
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">
+                    <button class="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full font-semibold">LABEL</button>
+                  </td>
+                </tr>
+                <!-- Repeat similar rows -->
+                <!-- Add a loop here if using dynamic data -->
+              </tbody>
+
+              <tbody>
+                <!-- Sample Row -->
+                <tr class="border-b hover:bg-gray-50">
+                  <td class="py-2 flex items-center space-x-2">
+                    <i class="fas fa-square text-gray-400 text-xs"></i>
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">Text</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2 flex items-center space-x-2">
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">
+                    <button class="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full font-semibold">LABEL</button>
+                  </td>
+                </tr>
+                <!-- Repeat similar rows -->
+                <!-- Add a loop here if using dynamic data -->
+              </tbody>
+
+              <tbody>
+                <!-- Sample Row -->
+                <tr class="border-b hover:bg-gray-50">
+                  <td class="py-2 flex items-center space-x-2">
+                    <i class="fas fa-square text-gray-400 text-xs"></i>
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">Text</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2 flex items-center space-x-2">
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">
+                    <button class="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full font-semibold">LABEL</button>
+                  </td>
+                </tr>
+                <!-- Repeat similar rows -->
+                <!-- Add a loop here if using dynamic data -->
+              </tbody>
+
+              <tbody>
+                <!-- Sample Row -->
+                <tr class="border-b hover:bg-gray-50">
+                  <td class="py-2 flex items-center space-x-2">
+                    <i class="fas fa-square text-gray-400 text-xs"></i>
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">Text</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2 flex items-center space-x-2">
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">
+                    <button class="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full font-semibold">LABEL</button>
+                  </td>
+                </tr>
+                <!-- Repeat similar rows -->
+                <!-- Add a loop here if using dynamic data -->
+              </tbody>
+
+              <tbody>
+                <!-- Sample Row -->
+                <tr class="border-b hover:bg-gray-50">
+                  <td class="py-2 flex items-center space-x-2">
+                    <i class="fas fa-square text-gray-400 text-xs"></i>
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">Text</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2 flex items-center space-x-2">
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">
+                    <button class="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full font-semibold">LABEL</button>
+                  </td>
+                </tr>
+                <!-- Repeat similar rows -->
+                <!-- Add a loop here if using dynamic data -->
+              </tbody>
+
+              <tbody>
+                <!-- Sample Row -->
+                <tr class="border-b hover:bg-gray-50">
+                  <td class="py-2 flex items-center space-x-2">
+                    <i class="fas fa-square text-gray-400 text-xs"></i>
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">Text</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2 flex items-center space-x-2">
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">
+                    <button class="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full font-semibold">LABEL</button>
+                  </td>
+                </tr>
+                <!-- Repeat similar rows -->
+                <!-- Add a loop here if using dynamic data -->
+              </tbody>
+
+              <tbody>
+                <!-- Sample Row -->
+                <tr class="border-b hover:bg-gray-50">
+                  <td class="py-2 flex items-center space-x-2">
+                    <i class="fas fa-square text-gray-400 text-xs"></i>
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">Text</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2 flex items-center space-x-2">
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">
+                    <button class="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full font-semibold">LABEL</button>
+                  </td>
+                </tr>
+                <!-- Repeat similar rows -->
+                <!-- Add a loop here if using dynamic data -->
+              </tbody>
+
+              <tbody>
+                <!-- Sample Row -->
+                <tr class="border-b hover:bg-gray-50">
+                  <td class="py-2 flex items-center space-x-2">
+                    <i class="fas fa-square text-gray-400 text-xs"></i>
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">Text</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2 flex items-center space-x-2">
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">
+                    <button class="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full font-semibold">LABEL</button>
+                  </td>
+                </tr>
+                <!-- Repeat similar rows -->
+                <!-- Add a loop here if using dynamic data -->
+              </tbody>
+
+              <tbody>
+                <!-- Sample Row -->
+                <tr class="border-b hover:bg-gray-50">
+                  <td class="py-2 flex items-center space-x-2">
+                    <i class="fas fa-square text-gray-400 text-xs"></i>
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">Text</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2 flex items-center space-x-2">
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">
+                    <button class="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full font-semibold">LABEL</button>
+                  </td>
+                </tr>
+                <!-- Repeat similar rows -->
+                <!-- Add a loop here if using dynamic data -->
+              </tbody>
+
+              <tbody>
+                <!-- Sample Row -->
+                <tr class="border-b hover:bg-gray-50">
+                  <td class="py-2 flex items-center space-x-2">
+                    <i class="fas fa-square text-gray-400 text-xs"></i>
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">Text</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2 flex items-center space-x-2">
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">
+                    <button class="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full font-semibold">LABEL</button>
+                  </td>
+                </tr>
+                <!-- Repeat similar rows -->
+                <!-- Add a loop here if using dynamic data -->
+              </tbody>
+
+              <tbody>
+                <!-- Sample Row -->
+                <tr class="border-b hover:bg-gray-50">
+                  <td class="py-2 flex items-center space-x-2">
+                    <i class="fas fa-square text-gray-400 text-xs"></i>
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">Text</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2 flex items-center space-x-2">
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">
+                    <button class="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full font-semibold">LABEL</button>
+                  </td>
+                </tr>
+                <!-- Repeat similar rows -->
+                <!-- Add a loop here if using dynamic data -->
+              </tbody>
+
+              <tbody>
+                <!-- Sample Row -->
+                <tr class="border-b hover:bg-gray-50">
+                  <td class="py-2 flex items-center space-x-2">
+                    <i class="fas fa-square text-gray-400 text-xs"></i>
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">Text</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2 flex items-center space-x-2">
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">
+                    <button class="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full font-semibold">LABEL</button>
+                  </td>
+                </tr>
+                <!-- Repeat similar rows -->
+                <!-- Add a loop here if using dynamic data -->
+              </tbody>
+              <tbody>
+                <!-- Sample Row -->
+                <tr class="border-b hover:bg-gray-50">
+                  <td class="py-2 flex items-center space-x-2">
+                    <i class="fas fa-square text-gray-400 text-xs"></i>
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">Text</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2 flex items-center space-x-2">
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">
+                    <button class="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full font-semibold">LABEL</button>
+                  </td>
+                </tr>
+                <!-- Repeat similar rows -->
+                <!-- Add a loop here if using dynamic data -->
+              </tbody>
+
+              <tbody>
+                <!-- Sample Row -->
+                <tr class="border-b hover:bg-gray-50">
+                  <td class="py-2 flex items-center space-x-2">
+                    <i class="fas fa-square text-gray-400 text-xs"></i>
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">Text</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2">2023/09/17</td>
+                  <td class="py-2 flex items-center space-x-2">
+                    <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">SE</span>
+                    <span>Sarah Eastern</span>
+                  </td>
+                  <td class="py-2">
+                    <button class="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full font-semibold">LABEL</button>
+                  </td>
+                </tr>
+                <!-- Repeat similar rows -->
+                <!-- Add a loop here if using dynamic data -->
+              </tbody>
+          </table>
+  
+          <!-- Pagination -->
+          <div class="flex items-center justify-between mt-4 text-sm text-gray-600">
+            <div class="flex space-x-1">
+              <button class="px-2 py-1 border rounded">« Back</button>
+              <button class="px-2 py-1 border rounded bg-black text-white">1</button>
+              <button class="px-2 py-1 border rounded">2</button>
+              <button class="px-2 py-1 border rounded">3</button>
+              <button class="px-2 py-1 border rounded">4</button>
+              <button class="px-2 py-1 border rounded">5</button>
+              <span>...</span>
+              <button class="px-2 py-1 border rounded">25</button>
+              <button class="px-2 py-1 border rounded">Next »</button>
+            </div>
+            <div>
+              <span>1-50 of 1,250</span>
+              <select class="ml-2 border rounded px-2 py-1">
+                <option>50</option>
+                <option>100</option>
+                <option>200</option>
+              </select>
+            </div>
+          </div>
+  
+        </div>
+      </main>
+  
+    </div>
+  ">
+    
+</body>
+</html>
