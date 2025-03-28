@@ -6,11 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Auth Slide Page</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
   <style>
     body,
     html {
       height: 100%;
       margin: 0;
+    }
+    .zen-dots-regular {
+      font-family: "Zen Dots", sans-serif;
+      font-weight: 400;
+      font-style: normal;
     }
   </style>
 </head>
@@ -19,16 +25,16 @@
   <div class="relative w-full h-full overflow-hidden bg-white grid grid-cols-12">
     <div class="col-span-7 relative">
       <!-- Logo -->
-      <a href="/" class="absolute top-4 left-6 z-10 hover:opacity-90 hover:scale-105 transition-all flex text-blue-800 text-3xl gap-2">
+      <a href="/" class="absolute top-4 left-6 z-10 hover:opacity-90 hover:scale-105 transition-all flex text-blue-800 text-3xl gap-2 ">
         <img src="/project_ken/my-frontend-project/assets/images/pulse-svgrepo-com 1.svg" alt="Logo" class="w-12 h-12">
-        <span>UNIHEALTH</span>
+        <span class="text-xl font-bold zen-dots-regular">UNIHEALTH</span>
       </a>
     
       <!-- Image -->
       <div id="authImage" class="w-full h-full bg-cover bg-center transition-all duration-500"
         style="background-image: url('/project_ken/my-frontend-project/assets/images/2149844641.jpg');">
         <div class="w-full h-full bg-black bg-opacity-30 flex items-center justify-center">
-          <span id="authText" class="text-white text-2xl">Welcome Back!</span>
+          <span id="authText" class="text-white text-2xl px-10 py-10">Welcome Back!</span>
         </div>
       </div>
     </div>

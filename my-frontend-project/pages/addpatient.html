@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Patient - UniHealth</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white min-h-screen">
+
+  <!-- Sidebar -->
+  <aside class="fixed top-0 left-0 w-2/12 h-screen bg-white shadow-md flex flex-col justify-between">
+    <div>
+      <div class="flex items-center gap-2 p-6">
+        <img src="/project_ken/my-frontend-project/assets/images/pulse-svgrepo-com 1.svg" class="w-8 h-8" alt="Logo">
+        <span class="font-bold text-lg">UniHealth</span>
+      </div>
+      <nav class="space-y-4 mt-10 px-6 text-gray-700 font-medium">
+        <a href="#" class="block hover:text-blue-500">General</a>
+        <a href="#" class="block hover:text-blue-500">Dashboard</a>
+        <a href="#" class="block hover:text-blue-500">Patients</a>
+        <a href="#" class="block hover:text-blue-500">Reports</a>
+        <a href="#" class="block hover:text-blue-500">Appointments</a>
+      </nav>
+    </div>
+
+    <!-- Profile -->
+    <div class="flex items-center gap-4 mb-8 px-4">
+        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-md">
+          <img src="/project_ken/my-frontend-project/assets/images/pulse-svgrepo-com 1.svg" alt="Profile" class="w-10 h-10">
+        </div>
+        <div class="flex flex-col">
+          <p class="font-semibold text-gray-800">Dr. Hillary Amfo</p>
+          <span class="text-sm text-gray-500">Admin</span>
+        </div>
+      </div>
+      
+  </aside>
+
+  <!-- Main Content -->
+  <main class="ml-[16.666667%] w-10/12 p-10">
+
+    <!-- Breadcrumbs -->
+    <nav class="text-gray-600 text-sm mb-8">
+      <ol class="list-reset flex">
+        <li><a href="#" class="text-blue-500">Dashboard</a></li>
+        <li><span class="mx-2">/</span></li>
+        <li><a href="#" class="text-blue-500">Patients</a></li>
+        <li><span class="mx-2">/</span></li>
+        <li class="text-gray-700">Add Patient</li>
+      </ol>
+    </nav>
+
+    <h2 class="text-2xl font-bold mb-6">Add New Patient</h2>
+
+    <!-- Form -->
+    <form class="bg-white p-8 rounded-lg shadow-md space-y-10">
+
+      <!-- Personal Information -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Personal Information</h3>
+        <div class="grid grid-cols-2 gap-6">
+          <div>
+            <label class="block mb-1 text-sm">First Name</label>
+            <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-2" required>
+          </div>
+          <div>
+            <label class="block mb-1 text-sm">Second Name</label>
+            <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-2">
+          </div>
+          <div>
+            <label class="block mb-1 text-sm">Date of Birth</label>
+            <input type="date" class="w-full border border-gray-300 rounded-lg px-4 py-2">
+          </div>
+          <div>
+            <label class="block mb-1 text-sm">Student ID</label>
+            <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-2">
+          </div>
+          <div>
+            <label class="block mb-1 text-sm">Grade/Class</label>
+            <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-2">
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Information -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Contact Information</h3>
+        <div class="grid grid-cols-2 gap-6">
+          <div>
+            <label class="block mb-1 text-sm">Parent/Guardian Name</label>
+            <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-2">
+          </div>
+          <div>
+            <label class="block mb-1 text-sm">Phone Number</label>
+            <input type="tel" class="w-full border border-gray-300 rounded-lg px-4 py-2">
+          </div>
+          <div>
+            <label class="block mb-1 text-sm">Email</label>
+            <input type="email" class="w-full border border-gray-300 rounded-lg px-4 py-2">
+          </div>
+          <div>
+            <label class="block mb-1 text-sm">Address</label>
+            <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-2">
+          </div>
+        </div>
+      </div>
+
+      <!-- Medical Condition -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Medical Condition</h3>
+        <div class="grid grid-cols-2 gap-6">
+          <div>
+            <label class="block mb-1 text-sm">Allergies</label>
+            <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-2">
+          </div>
+          <div>
+            <label class="block mb-1 text-sm">Medical State</label>
+            <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-2">
+          </div>
+          <div class="col-span-2">
+            <label class="block mb-1 text-sm">Additional Notes</label>
+            <textarea class="w-full border border-gray-300 rounded-lg px-4 py-2" rows="4"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex justify-end space-x-4">
+        <button type="reset"
+          class="px-6 py-2 rounded-lg border border-gray-400 text-gray-700 hover:bg-gray-100">Cancel</button>
+        <button type="submit"
+          class="px-6 py-2 rounded-lg bg-blue-500 text-white hover:bg-blue-600">Save</button>
+      </div>
+
+    </form>
+  </main>
+
+</body>
+
+</html>
